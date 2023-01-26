@@ -129,6 +129,10 @@
   <ItemGroup>
     <ClCompile Include="ClassPractice.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base7Test.h" />
+    <ClInclude Include="ClassPractice.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
