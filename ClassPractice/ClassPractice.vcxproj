@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Base7Test.h" />
     <ClInclude Include="ClassPractice.h" />
+    <ClInclude Include="LinkedListTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
