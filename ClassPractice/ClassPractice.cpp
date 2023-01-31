@@ -10,6 +10,9 @@ int main() {
     LinkedList list;
     list.createNode(1);
     list.createNode(2);
+    list.createNode(3);
+    list.createNode(4);
+    list.createNode(5546);
     list.printList();
 
 }

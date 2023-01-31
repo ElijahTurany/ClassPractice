@@ -23,6 +23,7 @@ class LinkedList {
 				tail->next = temp;
 				tail = temp;
 			}
+			//delete temp;
 		}
 		void printList() {
 			Node* n = head;
