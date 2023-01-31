@@ -32,6 +32,15 @@ class LinkedList {
 				n = n->next;
 			}
 		}
+		void insertNode(int input, int index) {
+			Node* prev;
+			Node* current;
+			int currentIndex = 0;
+
+			while (currentIndex <= index) {
+				
+			}
+		}
 	private:
 		Node* head;
 		Node* tail;
