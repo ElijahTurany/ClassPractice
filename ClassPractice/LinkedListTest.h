@@ -23,7 +23,6 @@ class LinkedList {
 				tail->next = temp;
 				tail = temp;
 			}
-			//delete temp;
 		}
 		void printList() {
 			Node* n = head;
@@ -33,13 +32,82 @@ class LinkedList {
 			}
 		}
 		void insertNode(int input, int index) {
-			Node* prev;
-			Node* current;
+			Node* currentNode = head;
+			int currentIndex = 1;
+
+			if (index == 0) {
+					Node* temp = new Node;
+					temp->data=input;
+					temp->next=currentNode;
+					head = temp;
+			}
+
+			while (currentIndex <= index) {
+				if (currentIndex == index) {
+					Node* temp = new Node;
+					temp->data=input;
+					temp->next=currentNode->next;
+					currentNode->next=temp;
+					break;
+				}
+				if (currentNode->next == NULL) {
+					break;
+				}
+				currentNode = currentNode->next;
+				currentIndex++;
+			}
+		}
+		int getNode(int index) {
+			Node* currentNode = head;
+			int currentIndex = 0;
+			int value = 0;
+
+			while (currentIndex <= index) {
+				if (currentIndex == index) {
+					value = currentNode->data;
+					break;
+				}
+				if (currentNode->next == NULL) {
+					break;
+				}
+				currentNode = currentNode->next;
+				currentIndex++;
+			}
+			return value;
+
+		}
+		void deleteNode(int index) {
+			Node* currentNode = head;
+			Node* prevNode;
 			int currentIndex = 0;
 
 			while (currentIndex <= index) {
-				
+				if (index == 0) {
+					head = head->next;
+					delete currentNode;
+					break;
+				}
+				if (currentIndex == index) {
+					prevNode->next=currentNode->next;;
+					delete currentNode;
+					break;
+				}
+				if (currentNode->next == NULL) {
+					break;
+				}
+				prevNode=currentNode;
+				currentNode = currentNode->next;
+				currentIndex++;
 			}
+		}
+		int getLength() {
+			Node* n = head;
+			int count = 0;
+			while (n != NULL) {
+				count++;
+				n = n->next;
+			}
+			return count;
 		}
 	private:
 		Node* head;

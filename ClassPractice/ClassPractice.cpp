@@ -13,7 +13,11 @@ int main() {
     list.createNode(3);
     list.createNode(4);
     list.createNode(5546);
+    list.insertNode(5, 4);
+    list.deleteNode(2);
     list.printList();
+    // cout << list.getLength();
+    // cout << list.getNode(2);
 
 }
 
