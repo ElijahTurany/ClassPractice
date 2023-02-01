@@ -78,7 +78,7 @@ class LinkedList {
 		}
 		void deleteNode(int index) {
 			Node* currentNode = head;
-			Node* prevNode;
+			Node* prevNode = head;
 			int currentIndex = 0;
 
 			while (currentIndex <= index) {
@@ -88,7 +88,7 @@ class LinkedList {
 					break;
 				}
 				if (currentIndex == index) {
-					prevNode->next=currentNode->next;;
+					prevNode->next=currentNode->next;
 					delete currentNode;
 					break;
 				}
