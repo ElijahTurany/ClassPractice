@@ -35,6 +35,10 @@ public:
 	}
 
 	PairOfInts& operator=(const PairOfInts& pairIn) {
+		delete first, second;
+		first = new CustomInt{ pairIn.first->get() };
+		second = new CustomInt{ pairIn.second->get() };
 
+		return *this;
 	}
 };
