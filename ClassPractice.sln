@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClassPractice", "ClassPractice\ClassPractice.vcxproj", "{65F96856-4345-4AE9-996B-03B733916039}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MoreClassPractice", "MoreClassPractice\MoreClassPractice.vcxproj", "{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryManagement", "MemoryManagement\MemoryManagement.vcxproj", "{0CC1411E-8485-426B-A130-98FEF6432A9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +25,22 @@ Global
 		{65F96856-4345-4AE9-996B-03B733916039}.Release|x64.Build.0 = Release|x64
 		{65F96856-4345-4AE9-996B-03B733916039}.Release|x86.ActiveCfg = Release|Win32
 		{65F96856-4345-4AE9-996B-03B733916039}.Release|x86.Build.0 = Release|Win32
+		{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}.Debug|x64.ActiveCfg = Debug|x64
+		{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}.Debug|x64.Build.0 = Debug|x64
+		{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}.Debug|x86.ActiveCfg = Debug|Win32
+		{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}.Debug|x86.Build.0 = Debug|Win32
+		{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}.Release|x64.ActiveCfg = Release|x64
+		{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}.Release|x64.Build.0 = Release|x64
+		{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}.Release|x86.ActiveCfg = Release|Win32
+		{491EF911-EFD9-4FF6-92F3-12ABDF60EBE9}.Release|x86.Build.0 = Release|Win32
+		{0CC1411E-8485-426B-A130-98FEF6432A9C}.Debug|x64.ActiveCfg = Debug|x64
+		{0CC1411E-8485-426B-A130-98FEF6432A9C}.Debug|x64.Build.0 = Debug|x64
+		{0CC1411E-8485-426B-A130-98FEF6432A9C}.Debug|x86.ActiveCfg = Debug|Win32
+		{0CC1411E-8485-426B-A130-98FEF6432A9C}.Debug|x86.Build.0 = Debug|Win32
+		{0CC1411E-8485-426B-A130-98FEF6432A9C}.Release|x64.ActiveCfg = Release|x64
+		{0CC1411E-8485-426B-A130-98FEF6432A9C}.Release|x64.Build.0 = Release|x64
+		{0CC1411E-8485-426B-A130-98FEF6432A9C}.Release|x86.ActiveCfg = Release|Win32
+		{0CC1411E-8485-426B-A130-98FEF6432A9C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
