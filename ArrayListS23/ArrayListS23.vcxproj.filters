@@ -18,5 +18,13 @@
     <ClCompile Include="ArrayListS23.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CustomArrayList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CustomArrayList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
