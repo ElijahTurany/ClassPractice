@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArrayListS23.cpp" />
-    <ClCompile Include="CustomArrayList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CustomArrayList.h" />
