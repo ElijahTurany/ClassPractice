@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 template <typename Type>
 class CustomArrayList {
@@ -55,19 +56,10 @@ class CustomArrayList {
 		}
 
 		void append(Type value) {
-			/*if (size == capacity) {
+			if (size == capacity) {
 				this->expand();
 			}
-			data[size] = value;
-			size++;*/
-
-			if (size < capacity) {
-				data[size] = value;
-				size++;
-			}
-			else {
-				this->expand();
-			}
+			data[size++] = value;
 		}
 
 		void expand() {
@@ -80,5 +72,27 @@ class CustomArrayList {
 			tmp = nullptr;
 			capacity *= 2;
 		}
+
+		Type& operator[](int index) {
+			if ((index < size) && (index >= 0)) {
+				return data[index];
+			}
+			else {
+				throw "Out of bounds";
+			}
+		}
+
+		template <typename Type>
+		friend std::ostream& operator<<(std::ostream& out, const CustomArrayList<Type>& myList);
 };
+
+template <typename Type>
+std::ostream& operator<<(std::ostream& out, const CustomArrayList<Type>& myList) {
+	out << "[";
+	for (int i = 0; i < myList.size; i++) {
+		out << myList.data[i] << " ";
+	}
+	out << "]";
+	return out;
+}
 

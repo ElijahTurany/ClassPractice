@@ -27,26 +27,28 @@ void runTestOne() {
 		}
 		cout << "Appending over capacity didn't throw exception" << endl;
 	}
-	catch(...) {}
+	catch (...) {}
 
 	CustomArrayList<int> customArray4;
 	try {
 		int van = customArray4.at(-1);
 		cout << "Accessing negative index didn't throw exception" << endl;
 	}
-	catch(...) {}
+	catch (...) {}
+}
 
-	CustomArrayList<int> customArray5;
-	for (int i = 0; i < 12; i++) {
-		customArray5.append(i);
-	}
-	for (int i = 0; i < customArray5.getSize(); i++) {
-		cout << customArray5.at(i) << " ";
-	}
+void runTestTwo() {
+	CustomArrayList<char> c;
+	c.append('i');
+	c.append('n');
+	c.append('d');
+	c.append('e');
+	c.append('x');
+	cout << c;
 
 }
 
 int main() {
-	runTestOne();
+	runTestTwo();
 }
 
