@@ -51,7 +51,7 @@ class CustomArrayList {
 			}
 		}
 		
-		int getSize() {
+		int getSize() { //O(1)
 			return size;
 		}
 
