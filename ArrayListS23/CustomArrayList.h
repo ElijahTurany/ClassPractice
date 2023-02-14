@@ -55,7 +55,7 @@ class CustomArrayList {
 			return size;
 		}
 
-		void append(Type value) {
+		void append(Type value) { //O(1)
 			if (size == capacity) {
 				this->expand();
 			}
