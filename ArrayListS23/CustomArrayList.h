@@ -8,15 +8,15 @@ class CustomArrayList {
 		int size{ 0 };
 		int capacity{ 10 };
 	public:
-		CustomArrayList() {
+		CustomArrayList() { //O(1)
 			data = new Type[capacity];
 		}
 
-		~CustomArrayList() {
+		~CustomArrayList() { //O(1)
 			delete[] data;
 		}
 
-		CustomArrayList(const CustomArrayList<Type>& other) {
+		CustomArrayList(const CustomArrayList<Type>& other) { //O(N)
 			capacity = other.capacity;
 			size = other.size;
 			data = new Type[capacity];
@@ -25,7 +25,7 @@ class CustomArrayList {
 			}
 		}
 
-		CustomArrayList operator=(const CustomArrayList<Type>& other) {
+		CustomArrayList operator=(const CustomArrayList<Type>& other) { //O(N)
 			delete[] data;
 			capacity = other.capacity;
 			size = other.size;
@@ -35,14 +35,14 @@ class CustomArrayList {
 			}
 		}
 		 
-		Type at(int index) {
+		Type at(int index) { //O(1)
 			if ((index < size) && (index >= 0)) {
 				return data[index];
 			}
 			throw "Out of bounds";
 		} 
 
-		void set(int index, Type value) {
+		void set(int index, Type value) { //O(1)
 			if ((index < size) && (index >= 0)) {
 				data[index] = value;
 			}
@@ -51,18 +51,18 @@ class CustomArrayList {
 			}
 		}
 		
-		int getSize() {
+		int getSize() { //O(1)
 			return size;
 		}
-
-		void append(Type value) {
+		
+		void append(Type value) { //O(N)
 			if (size == capacity) {
 				this->expand();
 			}
 			data[size++] = value;
 		}
 
-		void expand() {
+		void expand() { //O(N)
 			Type* tmp = new Type[capacity*2];
 			for (int i = 0; i < capacity; i++) {
 				tmp[i] = data[i];
@@ -73,7 +73,7 @@ class CustomArrayList {
 			capacity *= 2;
 		}
 
-		Type& operator[](int index) {
+		Type& operator[](int index) { //O(1)
 			if ((index < size) && (index >= 0)) {
 				return data[index];
 			}
@@ -87,7 +87,7 @@ class CustomArrayList {
 };
 
 template <typename Type>
-std::ostream& operator<<(std::ostream& out, const CustomArrayList<Type>& myList) {
+std::ostream& operator<<(std::ostream& out, const CustomArrayList<Type>& myList) { //O(N)
 	out << "[";
 	for (int i = 0; i < myList.size; i++) {
 		out << myList.data[i] << " ";
