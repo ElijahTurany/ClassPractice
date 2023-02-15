@@ -95,4 +95,3 @@ std::ostream& operator<<(std::ostream& out, const CustomArrayList<Type>& myList)
 	out << "]";
 	return out;
 }
-
