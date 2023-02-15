@@ -82,8 +82,8 @@ class CustomArrayList {
 			}
 		}
 
-		template <typename Type>
-		friend std::ostream& operator<<(std::ostream& out, const CustomArrayList<Type>& myList);
+		template <typename T> 
+		friend std::ostream& operator<<(std::ostream& out, const CustomArrayList<T>& myList);
 };
 
 template <typename Type>
