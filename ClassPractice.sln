@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryManagement", "MemoryM
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayListS23", "ArrayListS23\ArrayListS23.vcxproj", "{57BCDC8C-05F8-4F62-B772-FDDB6C4ACCF6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\LinkedList.vcxproj", "{E419FB09-230A-4D4E-B1BE-42B6654A0825}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{57BCDC8C-05F8-4F62-B772-FDDB6C4ACCF6}.Release|x64.Build.0 = Release|x64
 		{57BCDC8C-05F8-4F62-B772-FDDB6C4ACCF6}.Release|x86.ActiveCfg = Release|Win32
 		{57BCDC8C-05F8-4F62-B772-FDDB6C4ACCF6}.Release|x86.Build.0 = Release|Win32
+		{E419FB09-230A-4D4E-B1BE-42B6654A0825}.Debug|x64.ActiveCfg = Debug|x64
+		{E419FB09-230A-4D4E-B1BE-42B6654A0825}.Debug|x64.Build.0 = Debug|x64
+		{E419FB09-230A-4D4E-B1BE-42B6654A0825}.Debug|x86.ActiveCfg = Debug|Win32
+		{E419FB09-230A-4D4E-B1BE-42B6654A0825}.Debug|x86.Build.0 = Debug|Win32
+		{E419FB09-230A-4D4E-B1BE-42B6654A0825}.Release|x64.ActiveCfg = Release|x64
+		{E419FB09-230A-4D4E-B1BE-42B6654A0825}.Release|x64.Build.0 = Release|x64
+		{E419FB09-230A-4D4E-B1BE-42B6654A0825}.Release|x86.ActiveCfg = Release|Win32
+		{E419FB09-230A-4D4E-B1BE-42B6654A0825}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
