@@ -130,6 +130,7 @@
     <ClCompile Include="LinkedList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CustomLinkedList.h" />
     <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

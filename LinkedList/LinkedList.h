@@ -14,7 +14,7 @@ public:
 
 	~LinkedList() {
 		Node* prev = head;
-		Node* n = nullptr;
+		Node* n = head->next;
 		while (n != nullptr) {
 			n = prev->next;
 			delete prev;
@@ -46,7 +46,6 @@ public:
 
 	void insertNode(int input, int index) {
 		Node* currentNode = head;
-		int currentIndex = 1;
 
 		if (index == 0) {
 			Node* temp = new Node;
@@ -54,40 +53,34 @@ public:
 			temp->next = currentNode;
 			head = temp;
 		}
-
-		while (currentIndex <= index) {
-			if (currentIndex == index) {
-				Node* temp = new Node;
-				temp->data = input;
-				temp->next = currentNode->next;
-				currentNode->next = temp;
-				break;
+		else {
+			for (int i = 1; i <= index; i++) {
+				if (currentNode->next == nullptr) {
+					break;
+				}
+				currentNode = currentNode->next;
 			}
-			if (currentNode->next == nullptr) {
-				break;
-			}
-			currentNode = currentNode->next;
-			currentIndex++;
+			Node* temp = new Node;
+			temp->data = input;
+			temp->next = currentNode->next;
+			currentNode->next = temp;
 		}
 	}
 
 	int getNode(int index) {
-		Node* currentNode = head;
-		int currentIndex = 0;
-		int value = 0;
+		if (index < 0) {
+			throw "Invalid index";
+		}
 
-		while (currentIndex <= index) {
-			if (currentIndex == index) {
-				value = currentNode->data;
-				break;
-			}
+		Node* currentNode = head;
+
+		for (int i = 0; i <= index; i++) {
 			if (currentNode->next == nullptr) {
-				break;
+				throw "Out of bounds";
 			}
 			currentNode = currentNode->next;
-			currentIndex++;
 		}
-		return value;
+		return currentNode->data;
 
 	}
 
