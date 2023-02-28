@@ -56,7 +56,7 @@ public:
 		else {
 			for (int i = 1; i <= index; i++) {
 				if (currentNode->next == nullptr) {
-					break;
+					return;
 				}
 				currentNode = currentNode->next;
 			}
@@ -87,26 +87,22 @@ public:
 	void deleteNode(int index) {
 		Node* currentNode = head;
 		Node* prevNode = head;
-		int currentIndex = 0;
 
-		while (currentIndex <= index) {
-			if (index == 0) {
-				head = head->next;
-				delete currentNode;
-				break;
-			}
-			if (currentIndex == index) {
-				prevNode->next = currentNode->next;
-				delete currentNode;
-				break;
-			}
+		if (index == 0) {
+			head = head->next;
+			delete currentNode;
+		}
+
+		for (int i = 0; i < index; i++) {
 			if (currentNode->next == nullptr) {
-				break;
+				return;
 			}
 			prevNode = currentNode;
 			currentNode = currentNode->next;
-			currentIndex++;
 		}
+
+		prevNode->next = currentNode->next;
+		delete currentNode;
 	}
 
 	int getLength() {
