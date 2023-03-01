@@ -32,7 +32,9 @@ private:
 	int size{ 0 };
 	//constructor
 public:
-	CustomLinkedList() {} //Empty constructor
+	CustomLinkedList() {
+		head = new ListNode<T>{T{}}
+	}
 	//TODO Copy Constructor
 	//TODO destructor
 	~CustomLinkedList() { //O(N)
@@ -52,39 +54,29 @@ public:
 		ListNode<T>* temp = new ListNode<T>(item);
 		//(2) Traverse to the end of the chain
 		ListNode<T>* current{ head };
-		if (head == nullptr) {
-			head = temp;
+		while (current->getNext() != nullptr) {
+			current = current->getNext();
 		}
-		else {
-			while (current->getNext() != nullptr) {
-				current = current->getNext();
-			}
-			//(3) Attach the node we created onto the end of the chain
-			current->setNext(temp);
-		}
+		//(3) Attach the node we created onto the end of the chain
+		current->setNext(temp);
 		//(4) Increase the size
 		size++;
 	}
+
 	void insert(T item, int index) { //O(N)
 		if (index < 0 || index > size) {
 			return;
 		}
 
 		ListNode<T>* newNode = new ListNode<T>(item);
+		ListNode<T>* current{ head };
 
-		if (index == 0) {
-			newNode->setNext(head);
-			head = newNode;
+		for (int i = 0; i < index; i++) {
+			current = current->getNext();
 		}
-		else {
-			ListNode<T>* current{ head };
-			for (int i = 0; i < index - 1; i++) {
-				current = current->getNext();
-			}
 
-			newNode->setNext(current->getNext());
-			current->setNext(newNode);
-		}
+		newNode->setNext(current->getNext());
+		current->setNext(newNode);
 		size++;
 	}
 
@@ -93,13 +85,14 @@ public:
 			throw "Invalid index";
 		}
 
-		ListNode<T>* current{ head };
+		ListNode<T>* current{ head->getNext()};
 		for (int i = 0; i < index; i++) {
 			current = current->getNext();
 		}
 
 		return current->getData();
 	}
+
 	//must do: get rid of the item
 	//often want to: also get the item back
 	T remove(int index) { //O(N)
@@ -111,22 +104,14 @@ public:
 			throw "Invalid index";
 		}
 
-		if (index == 0) {
-			toDelete = head;
-			toReturn = head->getData();
-			head = head->getNext();
-			delete head;
+		for (int i = 0; i < index, i++) {
+			current = current->getNext();
 		}
-		else {
-			for (int i = 0; i < index - 1, i++) {
-				current = current->getNext();
-			}
 
-			toReturn = current->getNext()->getData();
-			toDelete{ current->getNext() };
-			current->setNext(current->getNext()->getNext());
-			delete toDelete;
-		}
+		toReturn = current->getNext()->getData();
+		toDelete{ current->getNext() };
+		current->setNext(current->getNext()->getNext());
+		delete toDelete;
 		size--;
 		return toReturn;
 	}
