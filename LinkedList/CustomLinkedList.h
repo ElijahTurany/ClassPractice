@@ -63,6 +63,14 @@ public:
 		size++;
 	}
 
+	//void prepend(T item) {
+	//	ListNode<T>* n = new ListNode<T>*{ item, head };
+	//	head = n;
+	//	size++;
+
+	//	tail->setNext(n);
+	//}
+
 	void insert(T item, int index) { //O(N)
 		if (index < 0 || index > size) {
 			return;
