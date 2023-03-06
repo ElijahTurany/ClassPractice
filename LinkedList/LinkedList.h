@@ -37,13 +37,13 @@ public:
 		}
 	}
 
-	void printList() {
-		Node* n = head;
-		while (n != nullptr) {
-			cout << n->data << " ";
-			n = n->next;
-		}
-	}
+	//void printList() {
+	//	Node* n = head;
+	//	while (n != nullptr) {
+	//		cout << n->data << " ";
+	//		n = n->next;
+	//	}
+	//}
 
 	void insertNode(int input, int index) {
 		Node* currentNode = head;
