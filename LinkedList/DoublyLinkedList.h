@@ -140,4 +140,25 @@ public:
 	int getSize() { //O(1)
 		return size;
 	}
+
+	void recursiveTraverse(ListNode<T>* current) {
+		if (current == nullptr) {
+			return;
+		}
+
+		recursiveTraverse(current->getNext());
+	}
+
+	void reverse() {
+		reverseNode(head, head->getNext());
+		head->setNext(nullptr);
+	}
+	void reverseNode(ListNode<T>* prev, ListNode<T>* current) {
+		if (current->getNext() == nullptr) {
+			return;
+		}
+		ListNode<T>* next{ current->getNext() };
+		current->setNext(prev);
+		reverseNode(current, next);
+	}
 };
