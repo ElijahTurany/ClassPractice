@@ -154,7 +154,11 @@ public:
 		head->setNext(nullptr);
 	}
 	void reverseNode(ListNode<T>* prev, ListNode<T>* current) {
+		if (current == nullptr) {
+			return;
+		}
 		if (current->getNext() == nullptr) {
+			current->setNext(prev);
 			return;
 		}
 		ListNode<T>* next{ current->getNext() };
