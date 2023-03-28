@@ -22,6 +22,8 @@ public:
 		cout << "You are now holding " << name << ". It weighs " << weight << endl;
 		held = true;
 	}
+
+	virtual bool use()=0;
 };
 
 class Sword : public Item {
@@ -42,6 +44,10 @@ public:
 			cout << "You are not holding " << name << endl;
 		}
 	}
+
+	bool use() {
+		return true;
+	}
 };
 
 class Shield : public Item {
@@ -61,5 +67,14 @@ public:
 			cout << "You are not holding " << name << endl;
 		}
 		
+	}
+
+	bool use() {
+		if (defense > weight) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 };
