@@ -12,7 +12,7 @@ public:
 	PrintableVector() {}
 
 	int size() {
-		return data.size()
+		return data.size();
 	}
 
 	void append(T item) {
@@ -32,12 +32,15 @@ public:
 	}
 
 	template <typename T>
-	friend ostream& operator<<(ostream& out, const PrintableVector& vec);
+	friend ostream& operator<<(ostream& out, const PrintableVector<T>& vec);
 };
 
-ostream& operator<<(ostream& out, PrintableVector& vec) {
-	for (int i = 0; i < vec.size(); i++) {
-		out << vec[i] << " ";
+template <typename T>
+ostream& operator<<(ostream& out, const PrintableVector<T>& vec) {
+	out << "[ ";
+	for (T item : vec.data) {
+		out << item << " ";
 	}
+	out << "]";
 	return out;
 }
