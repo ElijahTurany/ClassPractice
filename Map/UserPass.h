@@ -9,20 +9,24 @@ private:
 public:
 	void addPair(string username, string password) {
 		if (userPass[username] == "") {
-			userPass.emplace(username, password);
+			userPass[username] = password;
+			cout << "New login. Username: " << username << " Password: " << userPass[username] << endl;
 		}
 		else {
-			cout << "Username already exists";
+			cout << "Username already exists" << endl;
 		}
-		//userPass.emplace(username, password);
-		cout << "New login. Username: " << username << " Password: " << userPass[username] << endl;
 	}
 
 	bool login(string username, string password) {
-		if (userPass[username] == password) {
+		if (password == "") {
+			cout << "Please enter a password" << endl;
+		}
+		else if (userPass[username] == password) {
+			cout << "Login successful" << endl;
 			return true;
 		}
 		else {
+			cout << "Login failed" << endl;
 			return false;
 		}
 	}

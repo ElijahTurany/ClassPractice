@@ -29,5 +29,7 @@ int main() {
     up.addPair("John", "sparky09");
     up.addPair("John", "password");
     
-    cout << up.login("123", "abc") << endl << up.login("username", "passwodr");
+    up.login("123", "abc");
+    up.login("username", "passwodr");
+    up.login("abc", "");
 }
