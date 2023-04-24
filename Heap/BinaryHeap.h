@@ -50,7 +50,7 @@ public:
 	//Default constructor is fine
 	void insert(int x) {
 		//Fix the shape constraint first
-		data[size + 1] = x;
+		data[size + 1l] = x;
 		//Then the ordering constraint
 		reheapifyUp(size + 1);
 		size++;
